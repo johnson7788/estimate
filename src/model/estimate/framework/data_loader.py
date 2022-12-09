@@ -108,7 +108,7 @@ class DataLoader(DataLoaderBase):
             cat_key = stock_list.loc[self._symbols[i]].Sector    
             cat_index = cat_dict[cat_key]
             incidence_matrix[i][cat_index] = 1
-            
+        assert type(incidence_matrix).__module__ == np.__name__, f"数据incidence_matrix应该是numpy array格式"
         inci_sparse = sparse.coo_matrix(incidence_matrix)
         incidence_edges = utils.from_scipy_sparse_matrix(inci_sparse)
         hypergraphsnapshot = HypergraphSnapshots(self._symbols, self._start_train, train_data_storage, self._cuda)

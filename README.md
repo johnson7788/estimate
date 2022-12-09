@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2211.07400-b31b1b.svg)](https://arxiv.org/abs/2211.07400)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Advances in deep neural network (DNN) architectures have enabled new prediction techniques for stock market data. Unlike other multivariate time-series data, stock markets show two unique characteristics: (i) multi-order dynamics, as stock prices are affected by strong non-pairwise correlations (e.g., within the same industry); and (ii) internal dynamics, as each individual stock shows some particular behaviour. Recent DNN-based methods capture multi-order dynamics using hypergraphs, but rely on the Fourier basis in the convolution, which is both inefficient and ineffective. In addition, they largely ignore internal dynamics by adopting the same model for each stock, which implies a severe information loss. In this paper, we propose a framework for stock movement prediction to overcome the above issues. Specifically, the framework includes temporal generative filters that implement a memory-based mechanism onto an LSTM network in an attempt to learn individual patterns per stock. Moreover, we employ hypergraph attentions to capture the non-pairwise correlations. Here, using the wavelet basis instead of the Fourier basis, enables us to simplify the message passing and focus on the localized convolution. Experiments with US market data over six years show that our framework outperforms state-of-the-art methods in terms of profit and stability.
+深度神经网络（DNN）架构的进步使股票市场数据的新预测技术成为可能。与其他多变量时间序列数据不同，股票市场显示出两个独特的特征：(i) 多阶动态，因为股票价格受到强烈的非对等相关关系的影响（例如，在同一行业内）；(ii) 内部动态，因为每只股票显示出一些特殊的行为。最近基于DNN的方法使用超图捕捉多阶动态，但在卷积中依赖傅里叶基础，这既没有效率也没有效果。此外，它们在很大程度上忽略了内部动态，对每只股票采用相同的模型，这意味着严重的信息损失。在本文中，我们提出了一个股票走势预测的框架，以克服上述问题。具体来说，该框架包括时间生成过滤器，在LSTM网络上实现基于记忆的机制，试图学习每个股票的个别模式。此外，我们采用超图关注来捕捉非成对的关联性。在这里，使用小波基而不是傅里叶基，使我们能够简化信息传递并专注于局部卷积。用美国市场六年的数据进行的实验表明，我们的框架在利润和稳定性方面优于最先进的方法。
 
 Please read and cite our paper: [![arXiv](https://img.shields.io/badge/arXiv-2211.07400-b31b1b.svg)](https://arxiv.org/abs/2211.07400)
 
@@ -45,4 +45,4 @@ Please using the file **help.sh** for training and testing the ESTIMATE.
 ```
 bash help.sh
 ```
-Follow instructions and it's good to go. If the model is trained, the pretrained folder will exist.  As a result, we can disable the training mode and run the testing mode only.
+按照说明进行操作就可以了。如果模型被训练了，预训练的文件夹就会存在。 因此，我们可以停用训练模式，只运行测试模式。
